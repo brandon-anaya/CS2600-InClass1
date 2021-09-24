@@ -4,38 +4,74 @@ using namespace std;
 char chr;
 
 int main()
-{
-	int number;
+{	
+	int max_value;
+	int number; 
 	int guess;
-	int tries;
-    char answer;
+	char answer;
+	unsigned short response = 0;
+	bool menuQuit == false;
 
-    srand(number>0);
-	do
+	while (menuQuit == false)
 	{
-    number=rand()%100+1;;
-	cout<<"Enter a number between 1 and 100"<<endl;
-	cin>>guess;
-	if (number<guess)
-		cout<<"Too high try again"<<endl;
-	tries=1;
-	} while(number>guess);
-		cout<<"Too low try again"<<endl;
-		tries++;
-	if(number==guess)
-		cout<<"Congratualtions!! "<<endl;
-	cout<<"You got the right number in "<<tries<<" tries";
-	do
-	{
-cout<<"Would you like to play again?  Enter Y/N";
-		cin>>answer;
-    if ('N')
-		cout<<"Thanks for playing!";
-	} while(answer='Y');
+		do
+		{
+			cout << "Press 1 to play a game\n"
+			cout << "Press 2 to change the max number\n"
+			cout << "Press 3 to quit\n"
 			
+			cin >> response;
+			cout << "\n";
+		}
+		 while (response > 3);
+		
+		 switch (response)
+      	 {
+      	 	case 1:
 
-	
-	cin>>chr;
-		return 0;
+      	 	cout<<"Enter a number between 1 and 10"<<endl;
+			
+			cin>>guess;
+      	 	
+      	 	do
 
-	}
+      	 	{
+				if (number>guess);
+				{
+					cout<<"Too low try again"<<endl;
+				}
+      	 					
+				else if(number==guess)
+				{
+
+				cout<<"Congratualtions!!You Won!"<<endl;
+
+				return 0;
+				
+				}	
+
+				else //(number<guess)
+
+				{
+					cout<<"Too high try again"<<endl;
+				}
+			} while (gues != number); //end do while
+		
+			case 2:
+			if ( max_value < 0 || max_value > 10 )
+				{
+				
+				cout << "Change the number up to 10, please only enter positive numbers";
+				
+				cin >> max_value;
+				
+				cin.ignore(9,'\n');
+				
+				return 1;
+				}
+			
+		}		
+			
+			case 2:
+
+
